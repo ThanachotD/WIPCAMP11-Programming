@@ -7,31 +7,32 @@ public class Ex101 {
         Scanner sc = new Scanner(System.in);
         Scanner member = new Scanner(System.in);
         Scanner my = new Scanner(System.in);
+        double priceT , priceV;
         
-
-        System.out.print("ราคาอาหารทั้งหมด");
+        System.out.print("ราคาอาหารทั้งหมด : ");        
         
         double price = sc.nextInt();
         
-        System.out.print("มีบัตรสมาชิกไหม");
+        System.out.print("มีบัตรสมาชิกไหม : ");
         
         boolean have = member.nextBoolean();
         
         if (have = true) {
-            double priceT = price*(5.00/100.00);
-            
+            priceT = price+ price*(5.00/100.00);
+           
+        }
             System.out.println("มีบัตรสมาชิก");
             
-            System.out.println("ใช้เงินสดไหม");
+            System.out.print("ชำระด้วยเงินสดไหม :");
             
-            boolean money = my.nextBoolean();
-            
-            if (money = true){
-                System.out.println("ชำระด้วยเงินสด");
-                System.out.println(price-priceT);
-            }if (money = true) {
-                
-            }
+            boolean money = my.nextBoolean(); 
+        if(money = true){
+            priceV = price+(price*10.00/100.00);
+            System.out.print("ค่าอาหารทั้งหมด :" + priceV);
+        }
+        if (money = false){
+        priceV = price+(price*5.00/100.00);
+            System.out.print("ค่าอาหารทั้งหมด :" + priceV);
         }
     }
 }
